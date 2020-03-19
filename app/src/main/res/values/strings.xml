@@ -19,5 +19,12 @@
 
     <string name="app_label">Enjoy code&amp;music,Be happy!</string>
     <string name="standart_note">参考音:C</string>
+    <string name="ear_label">练耳</string>
+    <string name="ear_note">音阶听辨</string>
+    <string name="ear_interval">单程听辨</string>
+    <string name="identify_label">辨识</string>
+    <string name="identify_note">音阶辨识</string>
+    <string name="identify_interval">音程辨识</string>
+    <string name="notice_label">温馨提示：点击上方俩大按钮可多次播放哈~</string>
 
 </resources>

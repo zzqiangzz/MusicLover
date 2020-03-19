@@ -33,7 +33,7 @@ public class SplashActivity extends BaseActivity<SplashPresenter> implements Spl
 
     @Override
     public void gotoMain() {
-        Proxy.goNoteEarTraining(mActivity);
+        Proxy.goMain(mActivity);
         //把自己干掉
         finish();
     }

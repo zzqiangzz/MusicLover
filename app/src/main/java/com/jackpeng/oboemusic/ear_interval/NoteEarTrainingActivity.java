@@ -41,7 +41,7 @@ public class NoteEarTrainingActivity extends BaseEarActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_standard_note:
-                playSoundFromAssetMayWait("c");
+                playSoundFromAssetMayWait("c1");
                 break;
             case R.id.btn_question_note:
                 playSoundFromAssetMayWait(currentNoteStr);
@@ -82,7 +82,7 @@ public class NoteEarTrainingActivity extends BaseEarActivity {
         if (view != null){
             String noteTag = (String)view.getTag();
             if (!TextUtils.isEmpty(currentNoteStr) && !TextUtils.isEmpty(noteTag)
-                && currentNoteStr.equals(noteTag)){
+                && NoteRandomUtil.getNoteByGroupNote(currentNoteStr).equals(noteTag)){
                 return true;
             } else {
                 //do nothing
@@ -92,5 +92,7 @@ public class NoteEarTrainingActivity extends BaseEarActivity {
         }
         return false;
     }
+
+
 
 }
