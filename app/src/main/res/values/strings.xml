@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OboeMusic</string>
+
+    <string name="question_note">听辩音</string>
+
+    <!--12个音阶-->
+    <string name="c_note">C</string>
+    <string name="cd_note">C#(Db)</string>
+    <string name="d_note">D</string>
+    <string name="de_note">D#(Eb)</string>
+    <string name="e_note">E</string>
+    <string name="f_note">F</string>
+    <string name="fg_note">F#(Gb)</string>
+    <string name="g_note">G</string>
+    <string name="ga_note">G#(Ab)</string>
+    <string name="a_note">A</string>
+    <string name="ab_note">A#(Bb)</string>
+    <string name="b_note">B</string>
+
+    <string name="app_label">Code&amp;Music,Happy!</string>
+
+</resources>
