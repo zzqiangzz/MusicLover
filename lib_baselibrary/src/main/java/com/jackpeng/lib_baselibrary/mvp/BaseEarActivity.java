@@ -79,12 +79,18 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
             return;
         }
         D("name is"+name);
-        mSoundPool.play(sounddata.get(name),
-                1,// 左声道音量
-                1,// 右声道音量
-                1, // 优先级
-                0,// 循环播放次数
-                1);// 回放速度，该值在0.5-2.0之间 1为正常速度
+        if (sounddata.containsKey(name)){
+            mSoundPool.play(sounddata.get(name),
+                    1,// 左声道音量
+                    1,// 右声道音量
+                    1, // 优先级
+                    0,// 循环播放次数
+                    1);// 回放速度，该值在0.5-2.0之间 1为正常速度
+        } else {
+            //提示该音符还未添加
+            T("该音符还未添加~");
+        }
+
     }
 
     @Override

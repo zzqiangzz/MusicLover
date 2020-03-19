@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">OboeMusic</string>
 
-    <string name="question_note">听辩音</string>
+    <string name="question_note">听辩音:?</string>
 
     <!--12个音阶-->
     <string name="c_note">C</string>
@@ -17,6 +17,7 @@
     <string name="ab_note">A#(Bb)</string>
     <string name="b_note">B</string>
 
-    <string name="app_label">Code&amp;Music,Happy!</string>
+    <string name="app_label">Enjoy code&amp;music,Be happy!</string>
+    <string name="standart_note">参考音:C</string>
 
 </resources>
