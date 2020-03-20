@@ -1,9 +1,11 @@
 package com.jackpeng.lib_baselibrary.mvp;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -79,7 +81,29 @@ public abstract class BaseActivity<P extends BasePresenter> extends Activity {
         Log.e(TAG,msg);
     }
 
-    public void showProgressBar(String title, String message){
+    ProgressDialog mProgressDialog;
+    public void showProgressBar(final String title, final String message) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mProgressDialog == null){
+                    mProgressDialog = ProgressDialog.show(mActivity, title, message);
+                } else {
+                    mProgressDialog.setMessage(message);
+                }
+            }
+        });
+    }
+
+    public void hideProgressBar() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mProgressDialog != null && mProgressDialog.isShowing()) {
+                    mProgressDialog.dismiss();
+                }
+            }
+        });
 
     }
 

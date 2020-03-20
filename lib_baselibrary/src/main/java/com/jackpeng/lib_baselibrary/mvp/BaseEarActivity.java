@@ -14,6 +14,7 @@ import static android.media.AudioManager.STREAM_MUSIC;
 
 public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActivity implements SoundPool.OnLoadCompleteListener {
     protected SoundPool mSoundPool = null;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +23,20 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
     }
 
     private boolean isReady = false;
+
+    int currentLoadIndex = 1;
     @Override
     public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
         if (mSoundPool != null) {
-            D("load finish");
-            //T("音符已就位，随时听候您的指示~");
+            D("load finish,sampleId is" + sampleId + ", status is" + status);
             isReady = true;
+            if (currentLoadIndex < sounddata.size()) {
+                showProgressBar("音符加载", "请稍候" + (currentLoadIndex++) + "个音符已就位~");
+            } else {
+                hideProgressBar();
+                currentLoadIndex = 1;
+                T("音符已就位，随时听候您的指示~");
+            }
         }
     }
 
@@ -42,7 +51,7 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
             mSoundPool = new SoundPool.Builder()
                     .setMaxStreams(100)   //设置允许同时播放的流的最大值
                     .setAudioAttributes(abs)   //完全可以设置为null
-                    .build() ;
+                    .build();
         } else {
             /**
              * maxStreams:允许同时播放的流的最大值
@@ -56,41 +65,59 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
     }
 
     HashMap<String, Integer> sounddata = new HashMap<>();
-    private void loadSound(){
-        sounddata.put("xc1",mSoundPool.load(mContext, R.raw.xc1,1));
-        sounddata.put("xcd1",mSoundPool.load(mContext, R.raw.xcd1,1));
-        sounddata.put("xd1",mSoundPool.load(mContext, R.raw.xd1,1));
-        sounddata.put("xde1",mSoundPool.load(mContext, R.raw.xde1,1));
-        sounddata.put("xe1",mSoundPool.load(mContext, R.raw.xe1,1));
-        sounddata.put("xf1",mSoundPool.load(mContext, R.raw.xf1,1));
-        sounddata.put("xfg1",mSoundPool.load(mContext, R.raw.xfg1,1));
-        sounddata.put("xg1",mSoundPool.load(mContext, R.raw.xg1,1));
-        sounddata.put("xga1",mSoundPool.load(mContext, R.raw.xga1,1));
-        sounddata.put("xa1",mSoundPool.load(mContext, R.raw.xa1,1));
-        //sounddata.put("xab",mSoundPool.load(mContext, R.raw.ab,1));
-        //sounddata.put("xb",mSoundPool.load(mContext, R.raw.b,1));
-        sounddata.put("c1",mSoundPool.load(mContext, R.raw.c1,1));
-        sounddata.put("cd1",mSoundPool.load(mContext, R.raw.cd1,1));
-        sounddata.put("d1",mSoundPool.load(mContext, R.raw.d1,1));
-        sounddata.put("de1",mSoundPool.load(mContext, R.raw.de1,1));
-        sounddata.put("e1",mSoundPool.load(mContext, R.raw.e1,1));
-        sounddata.put("f1",mSoundPool.load(mContext, R.raw.f1,1));
-        //sounddata.put("fg1",mSoundPool.load(mContext, R.raw.xfg1,1));
-        sounddata.put("g1",mSoundPool.load(mContext, R.raw.g1,1));
-        sounddata.put("ga1",mSoundPool.load(mContext, R.raw.ga1,1));
-        sounddata.put("a1",mSoundPool.load(mContext, R.raw.a1,1));
-        //sounddata.put("ab",mSoundPool.load(mContext, R.raw.ab,1));
-        //sounddata.put("b",mSoundPool.load(mContext, R.raw.b,1));
+
+    private void loadSound() {
+        //大字一组
+        sounddata.put("xc1", mSoundPool.load(mContext, R.raw.xc1, 1));
+        sounddata.put("xcd1", mSoundPool.load(mContext, R.raw.xcd1, 1));
+        sounddata.put("xd1", mSoundPool.load(mContext, R.raw.xd1, 1));
+        sounddata.put("xde1", mSoundPool.load(mContext, R.raw.xde1, 1));
+        sounddata.put("xe1", mSoundPool.load(mContext, R.raw.xe1, 1));
+        sounddata.put("xf1", mSoundPool.load(mContext, R.raw.xf1, 1));
+        sounddata.put("xfg1", mSoundPool.load(mContext, R.raw.xfg1, 1));
+        sounddata.put("xg1", mSoundPool.load(mContext, R.raw.xg1, 1));
+        sounddata.put("xga1", mSoundPool.load(mContext, R.raw.xga1, 1));
+        sounddata.put("xa1", mSoundPool.load(mContext, R.raw.xa1, 1));
+        sounddata.put("xab1", mSoundPool.load(mContext, R.raw.xab1, 1));
+        sounddata.put("xb1", mSoundPool.load(mContext, R.raw.xb1, 1));
+        //大字组（暂无）
+        //小字组（暂无）
+        //小字一组
+        sounddata.put("c1", mSoundPool.load(mContext, R.raw.c1, 1));
+        sounddata.put("cd1", mSoundPool.load(mContext, R.raw.cd1, 1));
+        sounddata.put("d1", mSoundPool.load(mContext, R.raw.d1, 1));
+        sounddata.put("de1", mSoundPool.load(mContext, R.raw.de1, 1));
+        sounddata.put("e1", mSoundPool.load(mContext, R.raw.e1, 1));
+        sounddata.put("f1", mSoundPool.load(mContext, R.raw.f1, 1));
+        sounddata.put("fg1", mSoundPool.load(mContext, R.raw.fg1, 1));
+        sounddata.put("g1", mSoundPool.load(mContext, R.raw.g1, 1));
+        sounddata.put("ga1", mSoundPool.load(mContext, R.raw.ga1, 1));
+        sounddata.put("a1", mSoundPool.load(mContext, R.raw.a1, 1));
+        sounddata.put("ab1", mSoundPool.load(mContext, R.raw.ab1, 1));
+        sounddata.put("b1", mSoundPool.load(mContext, R.raw.b1, 1));
+        //小字二组
+        sounddata.put("c2", mSoundPool.load(mContext, R.raw.c2, 1));
+        sounddata.put("cd2", mSoundPool.load(mContext, R.raw.cd2, 1));
+        sounddata.put("d2", mSoundPool.load(mContext, R.raw.d2, 1));
+        sounddata.put("de2", mSoundPool.load(mContext, R.raw.de2, 1));
+        sounddata.put("e2", mSoundPool.load(mContext, R.raw.e2, 1));
+        sounddata.put("f2", mSoundPool.load(mContext, R.raw.f2, 1));
+        sounddata.put("fg2", mSoundPool.load(mContext, R.raw.fg2, 1));
+        sounddata.put("g2", mSoundPool.load(mContext, R.raw.g2, 1));
+        sounddata.put("ga2", mSoundPool.load(mContext, R.raw.ga2, 1));
+        sounddata.put("a2", mSoundPool.load(mContext, R.raw.a2, 1));
+        //sounddata.put("ab2",mSoundPool.load(mContext, R.raw.ab2,1));
+        //sounddata.put("b2",mSoundPool.load(mContext, R.raw.b2,1));
     }
 
     //从asset中播放指定名字声音
     public void playSoundFromAssetMayWait(String name) {
-        if (mSoundPool == null || !isReady){
+        if (mSoundPool == null || !isReady) {
             T("稍等，音符还在赶来的路上~");
             return;
         }
-        D("name is"+name);
-        if (sounddata.containsKey(name)){
+        D("name is" + name);
+        if (sounddata.containsKey(name)) {
             mSoundPool.play(sounddata.get(name),
                     1,// 左声道音量
                     1,// 右声道音量

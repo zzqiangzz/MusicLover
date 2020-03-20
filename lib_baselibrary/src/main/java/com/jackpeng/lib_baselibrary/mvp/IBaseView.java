@@ -15,6 +15,7 @@ public interface IBaseView {
     void E(String msg);
     //显示进度条
     void showProgressBar(String title, String message);
+    void hideProgressBar();
     //返回码？
     void resultOK();
     //返回码？
