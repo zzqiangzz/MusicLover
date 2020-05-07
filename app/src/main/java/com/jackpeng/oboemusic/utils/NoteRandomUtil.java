@@ -16,8 +16,8 @@ public class NoteRandomUtil {
     //音阶源：部分声音还没录进来
     public static String[] NOTE_ARRAY = new String[]
             {"xc1","xcd1","xd1","xde1","xe1","xf1","xfg1","xg1","xga1","xa1","xab1","xb1"/*大字一组*/
-                    /*,"xc","xcd","xd","xde","xe","xf","xfg","xg","xga","xa","xab","xb"*//*大字组*/
-                    /*,"c","cd","d","de","e","f","fg","g","ga","a","ab","b"*//*小字组*/
+                    ,"xc","xcd","xd","xde","xe","xf","xfg","xg","xga","xa","xab","xb"/*大字组*/
+                    ,"c","cd","d","de","e","f"/*,"fg","g","ga","a","ab","b"*//*小字组*/
                     ,"c1","cd1","d1","de1","e1","f1","fg1","g1","ga1","a1","ab1","b1"/*小字一组*/
                     ,"c2","cd2","d2","de2","e2","f2","fg2","g2","ga2","a2"/*,"ab2","b2"*//*小字二组*/
                     /*,"c3","cd3","d3","de3","e3","f3","fg3","g3","ga3","a3","ab3","b3"*//*小字三组*/
@@ -150,6 +150,7 @@ public class NoteRandomUtil {
                 case "d2":
                 case "d3":
                 case "d4":
+                case "d5":
                     return "d";
                 case "xe2":
                 case "xe1":
@@ -158,6 +159,7 @@ public class NoteRandomUtil {
                 case "e2":
                 case "e3":
                 case "e4":
+                case "e5":
                     return "e";
                 case "xf2":
                 case "xf1":
@@ -166,6 +168,7 @@ public class NoteRandomUtil {
                 case "f2":
                 case "f3":
                 case "f4":
+                case "f5":
                     return "f";
                 case "xg2":
                 case "xg1":
@@ -174,6 +177,7 @@ public class NoteRandomUtil {
                 case "g2":
                 case "g3":
                 case "g4":
+                case "g5":
                     return "g";
                 case "xa2":
                 case "xa1":
@@ -182,6 +186,7 @@ public class NoteRandomUtil {
                 case "a2":
                 case "a3":
                 case "a4":
+                case "a5":
                     return "a";
                 case "xb2":
                 case "xb1":
@@ -208,6 +213,7 @@ public class NoteRandomUtil {
                 case "de2":
                 case "de3":
                 case "de4":
+                case "de5":
                     return "de";
                 case "xfg2":
                 case "xfg1":
@@ -216,6 +222,7 @@ public class NoteRandomUtil {
                 case "fg2":
                 case "fg3":
                 case "fg4":
+                case "fg5":
                     return "fg";
                 case "xga2":
                 case "xga1":
@@ -224,6 +231,7 @@ public class NoteRandomUtil {
                 case "ga2":
                 case "ga3":
                 case "ga4":
+                case "ga5":
                     return "ga";
                 case "xab2":
                 case "xab1":
@@ -232,6 +240,7 @@ public class NoteRandomUtil {
                 case "ab2":
                 case "ab3":
                 case "ab4":
+                case "ab5":
                     return "ab";
                 default:
                     return "";

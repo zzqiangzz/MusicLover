@@ -80,8 +80,32 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
         sounddata.put("xa1", mSoundPool.load(mContext, R.raw.xa1, 1));
         sounddata.put("xab1", mSoundPool.load(mContext, R.raw.xab1, 1));
         sounddata.put("xb1", mSoundPool.load(mContext, R.raw.xb1, 1));
-        //大字组（暂无）
-        //小字组（暂无）
+        //大字组
+        sounddata.put("xc", mSoundPool.load(mContext, R.raw.xc, 1));
+        sounddata.put("xcd", mSoundPool.load(mContext, R.raw.xcd, 1));
+        sounddata.put("xd", mSoundPool.load(mContext, R.raw.xd, 1));
+        sounddata.put("xde", mSoundPool.load(mContext, R.raw.xde, 1));
+        sounddata.put("xe", mSoundPool.load(mContext, R.raw.xe, 1));
+        sounddata.put("xf", mSoundPool.load(mContext, R.raw.xf, 1));
+        sounddata.put("xfg", mSoundPool.load(mContext, R.raw.xfg, 1));
+        sounddata.put("xg", mSoundPool.load(mContext, R.raw.xg, 1));
+        sounddata.put("xga", mSoundPool.load(mContext, R.raw.xga, 1));
+        sounddata.put("xa", mSoundPool.load(mContext, R.raw.xa, 1));
+        sounddata.put("xab", mSoundPool.load(mContext, R.raw.xab, 1));
+        sounddata.put("xb", mSoundPool.load(mContext, R.raw.xb, 1));
+        //小字组
+        sounddata.put("c", mSoundPool.load(mContext, R.raw.c, 1));
+        sounddata.put("cd", mSoundPool.load(mContext, R.raw.cd, 1));
+        sounddata.put("d", mSoundPool.load(mContext, R.raw.d, 1));
+        sounddata.put("de", mSoundPool.load(mContext, R.raw.de, 1));
+        sounddata.put("e", mSoundPool.load(mContext, R.raw.e, 1));
+        sounddata.put("f", mSoundPool.load(mContext, R.raw.f, 1));
+        /*sounddata.put("fg", mSoundPool.load(mContext, R.raw.fg, 1));
+        sounddata.put("g", mSoundPool.load(mContext, R.raw.g, 1));
+        sounddata.put("ga", mSoundPool.load(mContext, R.raw.ga, 1));
+        sounddata.put("a", mSoundPool.load(mContext, R.raw.a, 1));
+        sounddata.put("ab", mSoundPool.load(mContext, R.raw.ab, 1));
+        sounddata.put("b", mSoundPool.load(mContext, R.raw.b, 1));*/
         //小字一组
         sounddata.put("c1", mSoundPool.load(mContext, R.raw.c1, 1));
         sounddata.put("cd1", mSoundPool.load(mContext, R.raw.cd1, 1));
@@ -126,7 +150,7 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
                     1);// 回放速度，该值在0.5-2.0之间 1为正常速度
         } else {
             //提示该音符还未添加
-            T("该音符还未添加~");
+            T("该音符还未加载~");
         }
 
     }

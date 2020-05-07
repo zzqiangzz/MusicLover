@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.jackpeng.lib_baselibrary.mvp.BaseActivity;
 import com.jackpeng.oboemusic.utils.Proxy;
+import com.tencent.bugly.Bugly;
 
 public class SplashActivity extends BaseActivity<SplashPresenter> implements SplashPresenter.IView{
 
@@ -26,6 +27,7 @@ public class SplashActivity extends BaseActivity<SplashPresenter> implements Spl
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+        //Bugly.init(getApplicationContext(), "2feefa9c4a", true);
         //1.5秒进入
         mvpPresenter.countDown();
     }
