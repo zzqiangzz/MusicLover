@@ -17,10 +17,10 @@ public class NoteRandomUtil {
     public static String[] NOTE_ARRAY = new String[]
             {"xc1","xcd1","xd1","xde1","xe1","xf1","xfg1","xg1","xga1","xa1","xab1","xb1"/*大字一组*/
                     ,"xc","xcd","xd","xde","xe","xf","xfg","xg","xga","xa","xab","xb"/*大字组*/
-                    ,"c","cd","d","de","e","f"/*,"fg","g","ga","a","ab","b"*//*小字组*/
+                    ,"c","cd","d","de","e","f","fg","g","ga","a","ab","b"/*小字组*/
                     ,"c1","cd1","d1","de1","e1","f1","fg1","g1","ga1","a1","ab1","b1"/*小字一组*/
-                    ,"c2","cd2","d2","de2","e2","f2","fg2","g2","ga2","a2"/*,"ab2","b2"*//*小字二组*/
-                    /*,"c3","cd3","d3","de3","e3","f3","fg3","g3","ga3","a3","ab3","b3"*//*小字三组*/
+                    ,"c2","cd2","d2","de2","e2","f2","fg2","g2","ga2","a2","ab2","b2"/*小字二组*/
+                    ,"c3","cd3","d3"/*,"de3","e3","f3","fg3","g3","ga3","a3","ab3","b3"*//*小字三组*/
                     /*,"c4","cd4","d4","de4","e4","f4","fg4","g4","ga4","a4","ab4","b4"*//*小字四组*/
                     /*,"c5"*//*小字五组*/
             };

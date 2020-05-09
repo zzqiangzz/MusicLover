@@ -100,12 +100,12 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
         sounddata.put("de", mSoundPool.load(mContext, R.raw.de, 1));
         sounddata.put("e", mSoundPool.load(mContext, R.raw.e, 1));
         sounddata.put("f", mSoundPool.load(mContext, R.raw.f, 1));
-        /*sounddata.put("fg", mSoundPool.load(mContext, R.raw.fg, 1));
+        sounddata.put("fg", mSoundPool.load(mContext, R.raw.fg, 1));
         sounddata.put("g", mSoundPool.load(mContext, R.raw.g, 1));
         sounddata.put("ga", mSoundPool.load(mContext, R.raw.ga, 1));
         sounddata.put("a", mSoundPool.load(mContext, R.raw.a, 1));
         sounddata.put("ab", mSoundPool.load(mContext, R.raw.ab, 1));
-        sounddata.put("b", mSoundPool.load(mContext, R.raw.b, 1));*/
+        sounddata.put("b", mSoundPool.load(mContext, R.raw.b, 1));
         //小字一组
         sounddata.put("c1", mSoundPool.load(mContext, R.raw.c1, 1));
         sounddata.put("cd1", mSoundPool.load(mContext, R.raw.cd1, 1));
@@ -130,8 +130,22 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
         sounddata.put("g2", mSoundPool.load(mContext, R.raw.g2, 1));
         sounddata.put("ga2", mSoundPool.load(mContext, R.raw.ga2, 1));
         sounddata.put("a2", mSoundPool.load(mContext, R.raw.a2, 1));
-        //sounddata.put("ab2",mSoundPool.load(mContext, R.raw.ab2,1));
-        //sounddata.put("b2",mSoundPool.load(mContext, R.raw.b2,1));
+        sounddata.put("ab2",mSoundPool.load(mContext, R.raw.ab2,1));
+        sounddata.put("b2",mSoundPool.load(mContext, R.raw.b2,1));
+
+        //小字三组
+        sounddata.put("c3", mSoundPool.load(mContext, R.raw.c3, 1));
+        sounddata.put("cd3", mSoundPool.load(mContext, R.raw.cd3, 1));
+        sounddata.put("d3", mSoundPool.load(mContext, R.raw.d3, 1));
+        /*sounddata.put("de3", mSoundPool.load(mContext, R.raw.de3, 1));
+        sounddata.put("e3", mSoundPool.load(mContext, R.raw.e3, 1));
+        sounddata.put("f3", mSoundPool.load(mContext, R.raw.f3, 1));
+        sounddata.put("fg3", mSoundPool.load(mContext, R.raw.fg3, 1));
+        sounddata.put("g3", mSoundPool.load(mContext, R.raw.g3, 1));
+        sounddata.put("ga3", mSoundPool.load(mContext, R.raw.ga3, 1));
+        sounddata.put("a3", mSoundPool.load(mContext, R.raw.a3, 1));
+        sounddata.put("ab3",mSoundPool.load(mContext, R.raw.ab3,1));
+        sounddata.put("b3",mSoundPool.load(mContext, R.raw.b3,1));*/
     }
 
     //从asset中播放指定名字声音

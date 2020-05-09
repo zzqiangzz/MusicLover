@@ -152,7 +152,9 @@ public class NoteEarTrainingActivity extends BaseEarActivity implements AdapterV
         mBNote.setEnabled(true);
     }
 
-    boolean[] yourChoice = new boolean[NoteRandomUtil.ALL_NOTE.length];
+    //默认全选中
+    boolean[] yourChoice = new boolean[/*NoteRandomUtil.ALL_NOTE.length*/]
+            {true,true,true,true,true,true,true,true,true,true,true,true};
     private void showMultiChoiceDialog(){
         AlertDialog.Builder multiChoiceDialog =
                 new AlertDialog.Builder(NoteEarTrainingActivity.this);

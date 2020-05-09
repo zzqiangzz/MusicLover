@@ -67,12 +67,12 @@
         <item>d#</item>
         <item>e</item>
         <item>f</item>
-        <!--<item>f#</item>
+        <item>f#</item>
         <item>g</item>
         <item>g#</item>
         <item>a</item>
         <item>a#</item>
-        <item>b</item>-->
+        <item>b</item>
         <!--小字1组-->
         <item>c1</item>
         <item>c1#</item>
@@ -97,13 +97,13 @@
         <item>g2</item>
         <item>g2#</item>
         <item>a2</item>
-        <!--<item>a2#</item>
-        <item>b2</item>-->
+        <item>a2#</item>
+        <item>b2</item>
         <!--小字3组-->
-        <!--<item>c3</item>
+        <item>c3</item>
         <item>c3#</item>
         <item>d3</item>
-        <item>d3#</item>
+        <!--<item>d3#</item>
         <item>e3</item>
         <item>f3</item>
         <item>f3#</item>
