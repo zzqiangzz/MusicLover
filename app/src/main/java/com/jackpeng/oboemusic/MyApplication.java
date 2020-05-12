@@ -9,9 +9,9 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Beta.autoInit = true;
-        Beta.canShowUpgradeActs.add(MainActivity.class);
-        Beta.installTinker();
+        //Beta.autoInit = true;
+        //Beta.canShowUpgradeActs.add(MainActivity.class);
+        //Beta.installTinker();
         Bugly.init(this, "2feefa9c4a", true);
     }
 }

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -24,6 +25,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 public class NoteEarTrainingActivity extends BaseEarActivity implements AdapterView.OnItemSelectedListener {
+    private static final String TAG = NoteEarTrainingActivity.class.getSimpleName();
     @BindView(R.id.btn_c_note)
     Button mCNote;
     @BindView(R.id.btn_cd_note)
@@ -83,7 +85,6 @@ public class NoteEarTrainingActivity extends BaseEarActivity implements AdapterV
         mSpEndNote.setSelection(endNoteIndex);
 
         nextSoundListen();
-
         mSpStartNote.setOnItemSelectedListener(this);
         mSpEndNote.setOnItemSelectedListener(this);
 
@@ -286,6 +287,8 @@ public class NoteEarTrainingActivity extends BaseEarActivity implements AdapterV
                 mBNote.setVisibility(View.INVISIBLE);
                 selectNoteStr.remove(mBNote.getTag().toString());
             }
+            //选完后要更新播放音
+            nextSoundListen();
         }
     }
 
@@ -309,12 +312,14 @@ public class NoteEarTrainingActivity extends BaseEarActivity implements AdapterV
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch (view.getId()){
+        switch (parent.getId()){
             case R.id.sp_start_note:
                 startNoteIndex = position;
+                Log.d(TAG,"startNoteIndex is"+startNoteIndex);
                 break;
             case R.id.sp_end_note:
                 endNoteIndex = position;
+                Log.d(TAG,"endNoteIndex is"+endNoteIndex);
                 break;
             default:
                 break;

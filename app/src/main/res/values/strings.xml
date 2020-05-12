@@ -103,7 +103,7 @@
         <item>c3</item>
         <item>c3#</item>
         <item>d3</item>
-        <!--<item>d3#</item>
+        <item>d3#</item>
         <item>e3</item>
         <item>f3</item>
         <item>f3#</item>
@@ -111,12 +111,12 @@
         <item>g3#</item>
         <item>a3</item>
         <item>a3#</item>
-        <item>b3</item>-->
+        <item>b3</item>
         <!--小字4组-->
-        <!--<item>c4</item>
+        <item>c4</item>
         <item>c4#</item>
         <item>d4</item>
-        <item>d4#</item>
+        <!--<item>d4#</item>
         <item>e4</item>
         <item>f4</item>
         <item>f4#</item>

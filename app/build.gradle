@@ -9,8 +9,8 @@ android {
         applicationId "com.jackpeng.oboemusic"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.2"
+        versionCode 5
+        versionName "1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -22,7 +22,7 @@ android {
 
         ndk {
             //设置支持的SO库架构
-            abiFilters 'armeabi-v7a' // 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi'//'armeabi-v7a' // 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
         }
     }
 
@@ -61,12 +61,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    externalNativeBuild {
+    /*externalNativeBuild {
         cmake {
             path "src/main/cpp/CMakeLists.txt"
             version "3.10.2"
         }
-    }
+    }*/
 }
 
 dependencies {
@@ -88,5 +88,5 @@ dependencies {
     //compile 'com.tencent.bugly:crashreport:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.3.2
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
     implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
-    implementation 'com.tencent.tinker:tinker-android-lib:1.9.9'
+    //implementation 'com.tencent.tinker:tinker-android-lib:1.9.9'
 }

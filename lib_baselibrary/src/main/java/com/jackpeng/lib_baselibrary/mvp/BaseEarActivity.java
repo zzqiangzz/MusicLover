@@ -137,7 +137,7 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
         sounddata.put("c3", mSoundPool.load(mContext, R.raw.c3, 1));
         sounddata.put("cd3", mSoundPool.load(mContext, R.raw.cd3, 1));
         sounddata.put("d3", mSoundPool.load(mContext, R.raw.d3, 1));
-        /*sounddata.put("de3", mSoundPool.load(mContext, R.raw.de3, 1));
+        sounddata.put("de3", mSoundPool.load(mContext, R.raw.de3, 1));
         sounddata.put("e3", mSoundPool.load(mContext, R.raw.e3, 1));
         sounddata.put("f3", mSoundPool.load(mContext, R.raw.f3, 1));
         sounddata.put("fg3", mSoundPool.load(mContext, R.raw.fg3, 1));
@@ -145,7 +145,21 @@ public abstract class BaseEarActivity<T extends BasePresenter> extends BaseActiv
         sounddata.put("ga3", mSoundPool.load(mContext, R.raw.ga3, 1));
         sounddata.put("a3", mSoundPool.load(mContext, R.raw.a3, 1));
         sounddata.put("ab3",mSoundPool.load(mContext, R.raw.ab3,1));
-        sounddata.put("b3",mSoundPool.load(mContext, R.raw.b3,1));*/
+        sounddata.put("b3",mSoundPool.load(mContext, R.raw.b3,1));
+
+        //小字四组
+        sounddata.put("c4", mSoundPool.load(mContext, R.raw.c4, 1));
+        sounddata.put("cd4", mSoundPool.load(mContext, R.raw.cd4, 1));
+        sounddata.put("d4", mSoundPool.load(mContext, R.raw.d4, 1));
+        /*sounddata.put("de4", mSoundPool.load(mContext, R.raw.de4, 1));
+        sounddata.put("e4", mSoundPool.load(mContext, R.raw.e4, 1));
+        sounddata.put("f4", mSoundPool.load(mContext, R.raw.f4, 1));
+        sounddata.put("fg4", mSoundPool.load(mContext, R.raw.fg4, 1));
+        sounddata.put("g4", mSoundPool.load(mContext, R.raw.g4, 1));
+        sounddata.put("ga4", mSoundPool.load(mContext, R.raw.ga4, 1));
+        sounddata.put("a4", mSoundPool.load(mContext, R.raw.a4, 1));
+        sounddata.put("ab4",mSoundPool.load(mContext, R.raw.ab4,1));
+        sounddata.put("b4",mSoundPool.load(mContext, R.raw.b4,1));*/
     }
 
     //从asset中播放指定名字声音
